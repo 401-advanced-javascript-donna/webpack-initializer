@@ -15,7 +15,6 @@ if(path !== '.') fs.mkdirSync(path);
 
 fs.mkdirSync(`${path}/src`);
 
-packageJsonWriter(`${path}/package.json`);
 eslintWriter(`${path}/.eslintrc`);
 babelWriter(`${path}/.babelrc`);
 gitIgnoreWriter(`${path}/.gitignore`);
@@ -24,3 +23,4 @@ webpackConfigWriter(`${path}/webpack.config.js`);
 srcIndexWriter(`${path}/src/index.js`, `${path}/src/index.html`);
 devDependenciesInstall(`${path}`);
 dependenciesInstall(`${path}`);
+packageJsonWriter(`${path}/package.json`);
