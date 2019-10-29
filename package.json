@@ -54,6 +54,8 @@
     "postcss-simple-vars": "^5.0.2",
     "prop-types": "^15.7.2",
     "style-loader": "^1.0.0",
+    "test2": "^1.0.5",
+    "test3": "^1.0.4",
     "url-loader": "^2.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
