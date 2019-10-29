@@ -1,16 +1,21 @@
 const installer = require('../installer');
-const { execSync } = require('child_process');
+const childProcess = require('child_process');
 
-execSync.execSync = jest.fn();
 
 describe('will it install?', () => {
-  it.skip('should install dependencies', () => {
-    installer('./', ['test1', 'test'], false);
-    expect(execSync.execSync.mock.calls[1][0]).toEqual('npm i [test1, test]');
+  const path = './';
+
+  it('should install dependencies', () => {
+    childProcess.execSync = jest.fn();
+    const dep = ['react'];
+    installer(path, dep, false);
+    expect(childProcess.execSync.mock.calls[0][0]).toBe('npm i react');
   });
 
-  it.skip('should install dev dependencies', () => {
-    installer('./', ['test2', 'test3'], true);
-    expect(execSync.execSync.mock.calls[0][0]).toEqual('npm i -D [test2, test3]');
+  it('should install dev dependencies', () => {
+    childProcess.execSync = jest.fn();
+    const dep = ['eslint', 'nodemon'];
+    installer(path, dep, true);
+    expect(childProcess.execSync.mock.calls[0][0]).toBe('npm i -D eslint nodemon');
   });
 });
