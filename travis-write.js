@@ -6,7 +6,7 @@ const createTravis = path => {
   node_js: node
   `;
 
-  write(path + './webpack.config.js', travis);
+  write(path + '/webpack.config.js', travis);
 };
 
 module.exports = createTravis;

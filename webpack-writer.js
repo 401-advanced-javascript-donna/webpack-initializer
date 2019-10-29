@@ -68,7 +68,7 @@ const createWebpack = path => {
     }
   };`;
 
-  write(path + './webpack.config.js', webpackConfig);
+  write(path + '/webpack.config.js', webpackConfig);
 };
 
 module.exports = createWebpack;

@@ -1,6 +1,6 @@
 const { write } = require('./writer');
 
-const createIndexJs = path => {
+const srcIndexWriter = path => {
   const indexJs = `
   #!/usr/bin/env node
   import React from 'react';
@@ -13,10 +13,8 @@ const createIndexJs = path => {
   );
   `;
 
-  write(path + './src/index.js', indexJs);
-};
+  write(path + '/src/index.js', indexJs);
 
-const createIndexHtml = path => {
   const indexHtml = `
   <!DOCTYPE html>
   <html lang="en">
@@ -35,10 +33,7 @@ const createIndexHtml = path => {
   </html>
   `;
 
-  write(path + './src/index.html', indexHtml);
+  write(path + '/src/index.html', indexHtml);
 };
 
-module.exports = {
-  createIndexJs,
-  createIndexHtml
-};
+module.exports = srcIndexWriter;

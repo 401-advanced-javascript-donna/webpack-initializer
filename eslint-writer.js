@@ -87,9 +87,9 @@ const createEslint = path => {
       "babel/no-invalid-this": 1,
       "babel/semi": 0
     }
-  }
+  };
 
-  writeJson(path + './.eslintrc', eslint);
+  writeJson(path + '/.eslintrc', eslint);
 };
 
 module.exports = createEslint;

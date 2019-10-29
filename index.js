@@ -15,12 +15,12 @@ if(path !== '.') fs.mkdirSync(path);
 
 fs.mkdirSync(`${path}/src`);
 
-eslintWriter(`${path}/.eslintrc`);
-babelWriter(`${path}/.babelrc`);
-gitIgnoreWriter(`${path}/.gitignore`);
-travisWriter(`${path}/.travis.yml`);
-webpackConfigWriter(`${path}/webpack.config.js`);
-srcIndexWriter(`${path}/src/index.js`, `${path}/src/index.html`);
+eslintWriter(`${path}`);
+babelWriter(`${path}`);
+gitIgnoreWriter(`${path}`);
+travisWriter(`${path}`);
+webpackConfigWriter(`${path}`);
+srcIndexWriter(`${path}`, `${path}`);
 devDependenciesInstall(`${path}`);
 dependenciesInstall(`${path}`);
-packageJsonWriter(`${path}/package.json`);
+packageJsonWriter(`${path}`);

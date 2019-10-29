@@ -12,7 +12,7 @@ const createBabel = path => {
     ]
   };
 
-  writeJson(path + './.babelrc', babel);
+  writeJson(path + '/.babelrc', babel);
 };
 
 module.exports = createBabel;
