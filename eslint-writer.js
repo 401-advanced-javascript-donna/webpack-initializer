@@ -1,93 +1,95 @@
+/* eslint-disable quotes */
 const { writeJson } = require('./writer');
 
 const createEslint = path => {
   const eslint = {
-    'parserOptions': {
-      'ecmaVersion': 9,
-      'sourceType': 'module'
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module"
     },
-    'parser': 'babel-eslint',
-    'env': {
-      'es6': true,
-      'browser': true,
-      'jest': true
+    "parser": "babel-eslint",
+    "env": {
+      "es6": true,
+      "browser": true,
+      "jest": true,
+      "node": true
     },
-    'plugins': [
-      'babel',
-      'react'
+    "plugins": [
+      "babel",
+      "react"
     ],
-    'extends': [
-      'eslint:recommended',
-      'plugin:react/recommended'
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
     ],
-    'rules': {
-      'no-console': 'warn',
-      'indent': [
-        'error',
+    "rules": {
+      "no-console": "warn",
+      "indent": [
+        "error",
         2,
         {
-          'SwitchCase': 1
+          "SwitchCase": 1
         }
       ],
-      'quotes': [
-        'error',
-        'single'
+      "quotes": [
+        "error",
+        "single"
       ],
-      'semi': [
-        'error',
-        'always'
+      "semi": [
+        "error",
+        "always"
       ],
-      'space-in-parens': [
-        'error'
+      "space-in-parens": [
+        "error"
       ],
-      'space-infix-ops': 'error',
-      'object-curly-spacing': [
-        'error',
-        'always'
+      "space-infix-ops": "error",
+      "object-curly-spacing": [
+        "error",
+        "always"
       ],
-      'comma-spacing': 'error',
-      'space-before-function-paren': [
-        'error',
-        'never'
+      "comma-spacing": "error",
+      "space-before-function-paren": [
+        "error",
+        "never"
       ],
-      'eol-last': [
-        'error',
-        'always'
+      "eol-last": [
+        "error",
+        "always"
       ],
-      'keyword-spacing': [
-        'error',
+      "keyword-spacing": [
+        "error",
         {
-          'before': true,
-          'after': true,
-          'overrides': {
-            'do': {
-              'after': false
+          "before": true,
+          "after": true,
+          "overrides": {
+            "do": {
+              "after": false
             },
-            'for': {
-              'after': false
+            "for": {
+              "after": false
             },
-            'if': {
-              'after': false
+            "if": {
+              "after": false
             },
-            'switch': {
-              'after': false
+            "switch": {
+              "after": false
             },
-            'while': {
-              'after': false
+            "while": {
+              "after": false
             },
-            'catch': {
-              'after': false
+            "catch": {
+              "after": false
             }
           }
         }
       ],
-      'array-bracket-spacing': 'error',
-      'babel/no-invalid-this': 1,
-      'babel/semi': 0
+      "array-bracket-spacing": "error",
+      "babel/no-invalid-this": 1,
+      "babel/semi": 0
     }
-  };
+  }
 
-  writeJson(path + './src/.eslintrc', eslint);
+  writeJson(path + './.eslintrc', eslint);
 };
 
 module.exports = createEslint;
