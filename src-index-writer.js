@@ -1,4 +1,4 @@
-const { writer } = require('./writer');
+const { write } = require('./writer');
 
 const createIndexJs = path => {
   const indexJs = `
@@ -13,7 +13,7 @@ const createIndexJs = path => {
   );
   `;
 
-  writer(path + './src/index.js', indexJs);
+  write(path + './src/index.js', indexJs);
 };
 
 const createIndexHtml = path => {
@@ -35,7 +35,7 @@ const createIndexHtml = path => {
   </html>
   `;
 
-  writer(path + './src/index.html', indexHtml);
+  write(path + './src/index.html', indexHtml);
 };
 
 module.exports = {

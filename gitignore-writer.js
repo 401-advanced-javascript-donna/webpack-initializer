@@ -64,8 +64,8 @@ const createGitignore = path => {
     # next.js build output
     .next`;
 
-  write(path + './.gitignore', createGitignore);
+  write(path + './.gitignore', createGitignore, gitignore);
 };
 
-module
+module.exports = createGitignore;
 
