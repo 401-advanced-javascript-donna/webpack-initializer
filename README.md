@@ -5,6 +5,7 @@
 ### Links and Resources
 * [Submission PR](https://github.com/401-advanced-javascript-donna/webpack-initializer/pull/1)
 * [Travis](https://travis-ci.com/401-advanced-javascript-donna/webpack-initializer)
+* [NPM](https://www.npmjs.com/package/webpack-initializer)
 
 
 #### Running the app
