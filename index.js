@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const fs = require('fs');
 const packageJsonWriter = require('./package-json-writer');
 const eslintWriter = require('./eslint-writer');
