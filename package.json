@@ -1,6 +1,6 @@
 {
-  "name": "webpack-initializer",
-  "version": "1.4.0",
+  "name": "create-webpack-initializer",
+  "version": "1.5.0",
   "description": "",
   "main": "src/index.js",
   "jest": {
